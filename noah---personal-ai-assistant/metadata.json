@@ -1,0 +1,8 @@
+{
+  "name": "noah - Personal AI Assistant",
+  "description": "A personal AI assistant named noah, inspired by Jarvis. It provides a dashboard overview and responds to user commands with a witty personality.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "prompt": ""
+}

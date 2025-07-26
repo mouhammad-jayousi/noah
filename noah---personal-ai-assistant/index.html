@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>noah AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom animation for the voice visualizer */
+      @keyframes pulse-outer {
+        0%, 100% { transform: scale(1); opacity: 0.5; }
+        50% { transform: scale(1.05); opacity: 0.8; }
+      }
+      @keyframes pulse-inner {
+        0%, 100% { transform: scale(1); opacity: 0.7; }
+        50% { transform: scale(0.95); opacity: 1; }
+      }
+      .animate-pulse-outer {
+        animation: pulse-outer 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+      .animate-pulse-inner {
+        animation: pulse-inner 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+      
+      /* Fade in animation for new components */
+      @keyframes fade-in {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in {
+        animation: fade-in 0.5s ease-out forwards;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.11.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-slate-900 text-slate-100 font-sans">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
